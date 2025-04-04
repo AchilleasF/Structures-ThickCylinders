@@ -136,7 +136,7 @@ Am = np.array([[w_c1_0, w_c2_0, w_c3_0, w_c4_0],
                [w_c1_L, w_c2_L, w_c3_L, w_c4_L],
                [b_c1_L, b_c2_L, b_c3_L, b_c4_L]])
 # RHS vector, corresponding to the boundary conditions and membrane solution
-Bv = np.array([-wm, -bm, -wm, -bm])
+Bv = np.array([-wm, 0.0, -wm, -bm])
 ## Solve for unknown coefficients
 Cis = np.linalg.solve(Am, Bv)
 c1 = Cis[0]; c2 = Cis[1]; c3 = Cis[2]; c4 = Cis[3]
